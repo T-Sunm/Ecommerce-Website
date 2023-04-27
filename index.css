@@ -71,6 +71,10 @@ span{
     left: 20px;
 
 }
+
+#header #mobile{
+    cursor: pointer;
+}
 /* ----------Home Page--------------- */
 #hero{
     background-image: url("img/hero4.png");
@@ -117,7 +121,11 @@ span{
 }
 #feature{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.5rem;
+    column-gap: 0.5rem;
 }
 .section-p1{
     padding: 40px 80px;
@@ -181,8 +189,9 @@ span{
 }
 .container-pro{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px 80px;
+    gap:1rem 0.5rem ;
     flex-wrap: wrap;
 }
 #product1 .pro{
@@ -193,7 +202,6 @@ span{
     border-radius: 14px;
     cursor: pointer;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-    margin: 15px 0;
     transition: 0.2s ease;
     position: relative;
     background-color: white;
@@ -302,6 +310,7 @@ span{
 #product2 h2{
     font-size: 40px;
     text-align: center;
+    margin: 3rem 0;
 }
 .container-pro2-container{
     position: relative;
@@ -441,8 +450,8 @@ span{
 }
 .container-pros2{
     display: flex;
-    justify-content: space-evenly;
     position: absolute;
+    gap: 4px;   
 }
 .container-pros2:nth-child(2){
     transform: translateX(100%);
@@ -462,7 +471,7 @@ span{
 /* ----------------sm-banner---------------------- */
 .container-banner-box{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 0px 35px;
 }
@@ -473,7 +482,7 @@ span{
     align-items: flex-start;
     text-align: center;
     background-image: url("img/banner/b17.jpg");
-    min-width: 580px;
+    width: 45%;
     height: 45vh;
     background-size: cover;
     background-position: center;
@@ -658,7 +667,7 @@ footer .copyright{
 /* ----------------------------Shop Page---------------------------------- */
 .page-header{
     background-image: url(img/banner/b1.jpg);
-    width: 100%;
+    width: 97.9%;
     height: 40vh;
     background-size:cover ;
     display: flex;
@@ -672,6 +681,7 @@ footer .copyright{
     font-size: 50px;
 }
 #pagination{
+    margin-top: 2rem;
     text-align: center;
 }
 #pagination a{
@@ -823,14 +833,18 @@ khi người dùng sử dụng bàn phím hoặc chuột để tương tác vớ
 /* -------------------------About-page--------------------------- */
 .about-header{
     background-image: url(img/about/banner.png);
+    object-fit: scale-down;
+    width: 100vw;
 }
 .about-head{
     display: flex;
     align-items: center;
 }
+
 .about-head img{
     width: 50%;
-    height: auto;
+    height: 100%;
+    display: block;
 }
 .about-head div{
     padding-left: 40px;
@@ -1088,4 +1102,70 @@ khi người dùng sử dụng bàn phím hoặc chuột để tương tác vớ
     #navbar li{
         margin-bottom: 25px;
     }
+    #hero{
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+    .about-head div{
+        overflow-y: scroll;
+        white-space: nowrap; 
+        padding: 0 15px;       
+    }
+}
+
+@media (max-width: 640px){
+
+      
+    #hero button {
+        font-weight: bold;
+        font-size: larger;
+    }
+
+    .banner-box {
+        min-width: 100%;
+        align-items: center;
+    }
+
+    #banner3{
+        padding: 0;
+        width: 100%;
+    }
+
+    #banner3 .banner-box{
+        padding: 0;
+    }
+    #banner3 .banner-box h2,h3{
+        text-align: center;
+    }
+
+    #blog{
+        padding: 100px 50px 0 50px;
+    }
+    .blog-box{
+        padding: 0;
+    }
+    .blog-img {
+        margin:0;
+    }
+    .form-details{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 1124px){
+    #newsletter {
+        justify-content: center;
+    }
+    #newsletter .newstext, .form {
+        padding: 0;
+    }
+    #newsletter .form {
+        padding: 0;
+    }
+    .form-details form input,
+.form-details form textarea{
+    width: 60%;
+}
 }
